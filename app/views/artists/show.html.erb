@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book App</title>
+  </head>
+  <body>
+    <h1>Artists</h1>
+    <h2><%= @artist.name %></h2>
+    <p> <% @artist.songs.each do |song| %>
+        <%= @artist.name %> - <%=song.name%> - <%= song.genre.name %>
+       <% end %></p>
+    <p> <% @artist.songs.each do |song| %>
+        songs/<%= song.to_slug%>.html
+       <% end %></p>
+
+    <p><% @artist.songs.each do |song| %>
+
+    /genres/<%= song.genre.to_slug %>.html/
+    <% end %></p>
+  </body>
+</html>

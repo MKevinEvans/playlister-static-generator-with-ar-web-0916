@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>All Artists</title>
+  </head>
+  <body>
+    <h1>Web 0916 Playlister Static Generator</h1>
+    <h2>All of the Artists...ALL OF THEM</h2>
+    <ul>
+    <% @artists.each do |artist| %>
+      <li><h4><a href="/artist?id=<%= artist.id %>"><%= artist.name %> <%= artist.name %></a></h4></li>
+    <% end %>
+  </ul>
+  </body>
+</html>

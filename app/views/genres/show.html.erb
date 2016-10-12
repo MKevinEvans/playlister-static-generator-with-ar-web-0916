@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Book App</title>
+  </head>
+  <body>
+    <h1>Genres</h1>
+
+    <h2><%= @genre.name %></h2>
+
+    <p> <% @genre.songs.each do |song| %>
+      <%= song.artist.name %> - <%=song.name%> - <%= song.genre.name %>
+       <% end %></p>
+    <p> <% @genre.songs.each do |song| %>
+        songs/<%= song.to_slug%>.html
+       <% end %></p>
+
+    <p> <% @genre.artists.each do |artist| %>
+     <%= artist.name %>
+       <% end %></p>
+    <p> <% @genre.artists.each do |artist| %>
+        artists/<%= artist.to_slug%>.html
+       <% end %></p>
+
+
+  </body>
+</html>
